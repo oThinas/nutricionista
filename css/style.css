@@ -1,0 +1,63 @@
+.cabecalho {
+    background-color: #353A40;
+    padding: 10px 0 15px 10px;
+    height: 15px;
+}
+
+.titulo-principal {
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.titulo-secao {
+    color: #383631;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 30px 40px 20px;
+}
+
+table, thead, tr, th, td {
+    border: 1px solid #ddd;
+    font: 18px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: #fff;
+    font-weight: 600;
+}
+
+.table {
+    width: 100%;
+}
+
+.thead-dark {
+    background-color: #353A40;
+}
+
+form {
+    margin: 0 40px;
+}
+
+label {
+    font: 18px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+input {
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input#nome{
+    width: 100%;
+}
+
+::placeholder {
+    color: #ADB5B8;
+}

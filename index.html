@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8270beafd7.js" crossorigin="anonymous"></script>
+    <title>Nutricionista</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <h1 class="titulo-principal">
+                Nutri Thinas - Nutrição
+                <i class="fas fa-seedling"></i>
+            </h1>
+        </div>
+    </header>
+    <h3 class="titulo-secao"><i class="fa-regular fa-calendar-days"></i> Consultas Realizadas</h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th id="coluna-nome">Nome</th>
+                <th id="coluna-data">Data da Consulta</th>
+                <th id="coluna-peso">Peso (kg)</th>
+                <th id="coluna-altura">Altura (m)</th>
+                <th id="coluna-imc">IMC</th>
+            </tr>
+        </thead>
+        <!--Apagar-->
+        <tbody>
+            <tr>
+                <td>Taís Barcelos Rodrigues Alonso</td>
+                <td>2020-11-15</td>
+                <td>52.7</td>
+                <td>1.65</td>
+                <td>19.75</td>
+            </tr>
+        </tbody>
+        <!--Apagar-->
+    </table>
+    <h3 class="titulo-secao"><i class="fa-regular fa-file-lines"></i></i> Cadastrar Consultas</h3>
+    <form method="post">
+        <label for="nome">Nome do Paciente</label>
+        <input type="text" name="nome" id="nome" placeholder="ex: Thiago Martins Prado">
+        <label for="data">Data da Consulta</label>
+        <input type="date" name="data" id="data">
+        <label for="peso">Peso (kg)</label>
+        <input type="number" name="peso" id="peso" step="0.1" placeholder="ex: 70.6">
+        <label for="altura">Altura (m)</label>
+        <input type="number" name="altura" id="altura" step="0.1" placeholder="ex: 1.83">
+        <button type="submit">Confirmar</button>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+</html>
