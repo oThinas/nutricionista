@@ -62,16 +62,36 @@ input#data {
     display: block;
 }
 
+.form-peso {
+    position: relative;
+    left: 200px;
+    bottom: 85px;
+}
+
 input#peso {
     display: block;
+    height: 20px;
+}
+
+.form-altura {
+    position: relative;
+    left: 430px;
+    bottom: 170px;
 }
 
 input#altura {
     display: block;
+    height: 20px;
 }
 
 ::placeholder {
     color: #ADB5B8;
+}
+
+.form-botao {
+    position: relative;
+    left: 660px;
+    bottom: 215px;
 }
 
 button.submit {
