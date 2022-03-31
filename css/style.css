@@ -45,7 +45,6 @@ form {
 
 label {
     font: 18px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 input {
@@ -54,8 +53,21 @@ input {
     margin-bottom: 20px;
 }
 
-input#nome{
+input#nome {
+    display: grid;
     width: 100%;
+}
+
+input#data {
+    display: block;
+}
+
+input#peso {
+    display: block;
+}
+
+input#altura {
+    display: block;
 }
 
 ::placeholder {

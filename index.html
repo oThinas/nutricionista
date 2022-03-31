@@ -43,16 +43,26 @@
     </table>
     <h3 class="titulo-secao"><i class="fa-regular fa-file-lines"></i></i> Cadastrar Consultas</h3>
     <form method="post">
-        <label for="nome">Nome do Paciente</label>
-        <input type="text" name="nome" id="nome" placeholder="ex: Thiago Martins Prado">
-        <label for="data">Data da Consulta</label>
-        <input type="date" name="data" id="data">
-        <label for="peso">Peso (kg)</label>
-        <input type="number" name="peso" id="peso" step="0.1" placeholder="ex: 70.6">
-        <label for="altura">Altura (m)</label>
-        <input type="number" name="altura" id="altura" step="0.1" placeholder="ex: 1.83">
-        <button type="submit" class="submit">Confirmar</button>
-        <button type="reset" class="reset">Limpar</button>
+        <div class="form-nome">
+            <label for="nome">Nome do Paciente</label>
+            <input type="text" name="nome" id="nome" placeholder="ex: Thiago Martins Prado">
+        </div>
+        <div class="form-data">
+            <label for="data">Data da Consulta</label>
+            <input type="date" name="data" id="data">
+        </div>
+        <div class="form-peso">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" name="peso" id="peso" step="0.1" placeholder="ex: 70.6">
+        </div>
+        <div class="form-altura">
+            <label for="altura">Altura (m)</label>
+            <input type="number" name="altura" id="altura" step="0.1" placeholder="ex: 1.83">
+        </div>
+        <div class="form-butoes">
+            <button type="submit" class="submit">Confirmar</button>
+            <button type="reset" class="reset">Limpar</button>
+        </div>
     </form>
 </body>
 </html>
