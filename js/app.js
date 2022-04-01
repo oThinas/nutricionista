@@ -4,7 +4,6 @@ var campos = [
     document.querySelector('#peso'),
     document.querySelector('#altura'),
 ];
-console.log(campos);
 
 //var tbody = document.createElement('table tbody'); //Não funciona
 var table = document.querySelector('table') //Não consta na apostila
