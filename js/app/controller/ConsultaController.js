@@ -5,6 +5,7 @@ class ConsultaController {
         this._inputData = $('#data');
         this._inputPeso = $('#peso');
         this._inputAltura = $('#altura');
+        this._listaConsultas = new ListaConsultas();
     }
 
     adiciona(evento) {
@@ -12,28 +13,27 @@ class ConsultaController {
         
         let consulta = new Consulta(
             this._inputNome.value,
-            new Date(...
-                this._inputData.value
-                .split('-')
-                .map((item, indice) => item - (indice % 2))),
-
-            // [new Date] Trata o problema da data, isso porque todo input date é inserido como string, porém Date é um objeto
-            // [...] Spread operator: informa que o primeiro item do array (split)Date ocupará o primeiro parâmetro do construtor (dd-mm-yyyy)
-            // Como Date é um array agora (split), o mês 1, na verdade tem o índice 0. Para resolver isso, usamos o método map()
-            // Estrutura inicial:
-            //let consulta = new Consulta(
-            // this._inputNome.value,
-            // new Date(...
-            //     this._inputData.value
-            //     .split('-')
-            //     .map(function(item) {
-            //         return item;
-            //     })),
-            //
-                
+            DateHelper.textoParaData(this._inputData.value),
             this._inputPeso.value,
             this._inputAltura.value
         );
-        console.log(consulta);
+    }
+
+    _criaConsulta() {
+        return new Consulta(
+            this._inputNome.value,
+            DateHelper.textoParaData(this._inputData.value),
+            this._inputPeso.value,
+            this._inputAltura.value
+        );
+    }
+
+    _limparFormulario() {
+        this._inputNome.value = "";
+        this._inputData.value = "";
+        this._inputPeso.value = "";
+        this._inputAltura.value = "";
+
+        this._inputNome.focus();
     }
 }
