@@ -1,11 +1,13 @@
 class ConsultaController {
     constructor() {
-        let $ = document.querySelector.bind(document); // querySelector é atribuído a $, mas permanece associado ao document
+        let $ = document.querySelector.bind(document);
         this._inputNome = $('#nome');
         this._inputData = $('#data');
         this._inputPeso = $('#peso');
         this._inputAltura = $('#altura');
         this._listaConsultas = new ListaConsultas();
+        this._consultasView = new ConsultasView($('#consultasView'));
+        this._consultasView.update();
     }
 
     adiciona(evento) {
@@ -17,6 +19,8 @@ class ConsultaController {
             this._inputPeso.value,
             this._inputAltura.value
         );
+
+        console.log(consulta);
     }
 
     _criaConsulta() {
