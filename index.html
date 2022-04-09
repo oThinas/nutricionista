@@ -23,6 +23,7 @@
     <div id="consultasView"></div>
     <h3 class="titulo-secao"><i class="fa-regular fa-file-lines"></i></i> Cadastrar Consultas</h3>
     <form method="post" onsubmit="consultaController.adiciona(event)">
+        <div id="mensagensView"></div>
         <div class="form-nome">
             <label for="nome">Nome do Paciente</label>
             <input type="text" name="nome" id="nome" placeholder="ex: Thiago Martins Prado">
@@ -47,11 +48,13 @@
     
     <script type="text/javascript" src="js/app/models/Consulta.js"></script>
     <script type="text/javascript" src="js/app/models/ListaConsultas.js"></script>
+    <script type="text/javascript" src="js/app/models/Mensagem.js"></script>
     <script type="text/javascript" src="js/app/helpers/DateHelper.js"></script>
     <script type="text/javascript" src="js/app/controllers/ConsultaController.js"></script>
     <script type="text/javascript" src="js/app/views/ConsultasView.js"></script>
+    <script type="text/javascript" src="js/app/views/MensagensView.js"></script>
     <script type="text/javascript">
-        let consultaController = new ConsultaController();
+        let consultaController = new ConsultaController()
     </script>
 </body>
 </html>

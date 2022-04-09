@@ -1,11 +1,11 @@
 class DateHelper {
     constructor() {
-        throw new Error('Essa classe não pode ser instânciada.');
+        throw new Error('Essa classe não pode ser instânciada.')
     }
 
     static textoParaData(texto) {
         if (/^d{4}-d{2}-d{2}$/.test(texto)) {
-            throw new Error('O formato correto é yyyy-mm-dd');
+            throw new Error('O formato correto é yyyy-mm-dd')
         }
         // Informa que o texto recebido deve possuir quatro dígitos, -, dois dígitos, -, dois dígitos
         // ^ e $ indicam que mais nenhum caractére será aceito
@@ -14,7 +14,7 @@ class DateHelper {
         return new Date(...
             texto.split('-')
             .map((item, indice) => item - (indice % 2))
-        );
+        )
 
     }
 
@@ -33,7 +33,7 @@ class DateHelper {
             //
 
     static dataParaTexto(data) {
-        return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;
+        return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
         // return data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
         // É a mesma coisa, mas o primeiro usa Template String
     }
