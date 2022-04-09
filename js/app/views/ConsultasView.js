@@ -3,11 +3,11 @@ class ConsultasView {
         this._elemento = elemento;
     }
 
-    update() {
-        this._elemento.innerHTML = this._template();
+    update(model) {
+        this._elemento.innerHTML = this._template(model);
       }
       
-    _template() {
+    _template(model) {
       return `
           <table class="table table-bordered">
           <thead class="thead-dark">
@@ -20,7 +20,15 @@ class ConsultasView {
               </tr>
           </thead>
           <tbody>
-      
+            ${model.consultas.map(c => `
+                <tr>
+                    <td>${c.nome}</td>
+                    <td>${DateHelper.dataParaTexto(c.data)}</td>
+                    <td>${c.peso}</td>
+                    <td>${c.altura}</td>
+                    <td>${c.imc.toFixed(2)}</td>
+                </tr>
+            `).join('')}
           </tbody>
           </table>
         `;
