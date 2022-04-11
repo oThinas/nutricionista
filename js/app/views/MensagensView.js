@@ -1,10 +1,6 @@
-class MensagensView { // Diferente da apostila que está MensagemView, deixei Mensagens no plural para seguir o padrão de views
+class MensagensView extends View{ // Diferente da apostila que está MensagemView, deixei Mensagens no plural para seguir o padrão de views
     constructor(elemento) {
-        this._elemento = elemento
-    }
-
-    update(model) {
-        this._elemento.innerHTML = this._template(model)
+        super(elemento)
     }
 
     _template(model) {

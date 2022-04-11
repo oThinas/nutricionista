@@ -1,12 +1,8 @@
-class ConsultasView {
+class ConsultasView extends View{
     constructor(elemento) {
-        this._elemento = elemento
+        super(elemento)
     }
 
-    update(model) {
-        this._elemento.innerHTML = this._template(model)
-      }
-      
     _template(model) {
       return `
           <table class="table table-bordered">
